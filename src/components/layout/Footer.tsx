@@ -112,8 +112,8 @@ export default function Footer() {
             &copy; {new Date().getFullYear()} Jaaju Kitchen & Bar. All rights reserved.
           </p>
           <div className="flex gap-6">
-            <Link to="#" className="text-gray-500 hover:text-white text-xs tracking-wider">Privacy Policy</Link>
-            <Link to="#" className="text-gray-500 hover:text-white text-xs tracking-wider">Terms of Service</Link>
+            <Link to="/privacy-policy" className="text-gray-500 hover:text-white text-xs tracking-wider">Privacy Policy</Link>
+            <Link to="/terms-of-service" className="text-gray-500 hover:text-white text-xs tracking-wider">Terms of Service</Link>
           </div>
         </div>
       </div>

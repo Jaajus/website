@@ -33,40 +33,39 @@ export default function FeaturedMenu() {
   return (
     <section className="py-32 px-6 bg-charcoal-900 border-y border-white/5 relative">
       <div className="max-w-7xl mx-auto">
-        <div className="flex flex-col md:flex-row justify-between items-end mb-20 gap-8">
-          <div>
-            <motion.p
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              className="text-gold-400 text-xs tracking-[0.3em] uppercase mb-4"
-            >
-              Taste of Luxury
-            </motion.p>
-            <motion.h2
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: 0.1 }}
-              className="text-4xl md:text-5xl lg:text-6xl"
-            >
-              Curated <span className="italic text-gradient-gold">Classics</span>
-            </motion.h2>
-          </div>
-          <motion.div
-            initial={{ opacity: 0, y: 10 }}
+        <div className="text-center mb-16">
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
+            className="text-gold-400 text-xs tracking-[0.3em] uppercase mb-4"
           >
-            <Link
-              to="/menu"
-              className="group flex items-center gap-3 text-sm tracking-widest uppercase text-white hover:text-gold-400 transition-colors"
-            >
-              View Full Menu
-              <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
-            </Link>
-          </motion.div>
+            Taste of Luxury
+          </motion.p>
+          <motion.h2
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.1 }}
+            className="text-4xl md:text-5xl lg:text-6xl"
+          >
+            Curated <span className="italic text-gradient-gold">Classics</span>
+          </motion.h2>
         </div>
+        <motion.div
+          initial={{ opacity: 0, y: 10 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className='flex justify-end mb-8'
+        >
+          <Link
+            to="/menu"
+            className="group flex items-center gap-3 text-sm tracking-widest uppercase text-white hover:text-gold-400 transition-colors"
+          >
+            View Full Menu
+            <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
+          </Link>
+        </motion.div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-x-16 gap-y-12">
           {menuItems.map((item, i) => (

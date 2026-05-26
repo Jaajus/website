@@ -34,40 +34,47 @@ export default function Navbar() {
   }, [location.pathname]);
 
   // Lock body scroll when mobile menu is open
+
   useEffect(() => {
     if (isMobileMenuOpen) {
       document.body.style.overflow = 'hidden';
+      document.body.style.touchAction = 'none';
     } else {
       document.body.style.overflow = '';
+      document.body.style.touchAction = '';
     }
+
     return () => {
       document.body.style.overflow = '';
+      document.body.style.touchAction = '';
     };
   }, [isMobileMenuOpen]);
 
   const isHome = location.pathname === '/';
-  const navBackground = isScrolled || !isHome ? 'bg-charcoal-950/90 backdrop-blur-xl border-b border-white/5 py-4' : 'bg-transparent py-6';
+  const navBackground = isScrolled || !isHome
+    ? 'bg-charcoal-950/90 backdrop-blur-xl border-b border-white/5'
+    : 'bg-transparent';
 
   return (
     <>
       <header className={cn('fixed top-0 left-0 right-0 z-50 transition-all duration-300', navBackground)}>
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12 flex items-center justify-between">
-          <Link to="/" className="relative z-50 group flex flex-col items-center select-none">
+        <div className="mx-auto px-3 sm:px-6 lg:px-12 flex items-center justify-between gap-2 h-16 sm:h-20">
+          <Link to="/" className="relative z-50 group flex flex-col items-center select-none flex-shrink-0">
             <img
               src={JaajuLogo}
               alt="Jaaju Kitchen & Bar Logo"
               className={cn(
                 'h-auto transition-all duration-300 object-contain',
                 isScrolled
-                  ? 'w-16 lg:w-20'
-                  : 'w-20 lg:w-24'
+                  ? 'w-12 sm:w-14 lg:w-20'
+                  : 'w-14 sm:w-20 lg:w-24'
               )}
             />
             <span className={cn(
-              "font-sans tracking-[0.2em] text-[#ae6750] whitespace-nowrap uppercase transition-all duration-300",
+              "hidden sm:block font-sans tracking-[0.15em] sm:tracking-[0.2em] text-[#ae6750] whitespace-nowrap uppercase transition-all duration-300",
               isScrolled
-                ? 'text-[0.55rem] mt-0.5'
-                : 'text-[0.65rem] mt-1'
+                ? 'text-[0.5rem] sm:text-[0.55rem] mt-0.5'
+                : 'text-[0.55rem] sm:text-[0.65rem] mt-0.5 sm:mt-1'
             )}>
               Kitchen & Bar
             </span>
@@ -114,11 +121,11 @@ export default function Navbar() {
 
           {/* Mobile Menu Toggle */}
           <button
-            className="lg:hidden relative z-50 p-2 text-white hover:text-gold-400 transition-colors focus:outline-none"
+            className="lg:hidden relative z-[60] flex-shrink-0 p-1.5 sm:p-2 text-white hover:text-gold-400 transition-colors focus:outline-none"
             aria-label="Toggle navigation menu"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           >
-            {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
+            {isMobileMenuOpen ? <X size={22} /> : <Menu size={22} />}
           </button>
         </div>
       </header>
@@ -131,9 +138,8 @@ export default function Navbar() {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
             transition={{ duration: 0.3 }}
-            className="fixed inset-0 z-40 bg-charcoal-950/95 backdrop-blur-xl flex flex-col items-center justify-start overflow-y-auto pt-28 pb-12 w-full h-full"
-          >
-            <nav className="flex flex-col items-center gap-6 w-full max-w-xs px-6 my-auto">
+            className="fixed inset-0 z-40 bg-charcoal-950/98 backdrop-blur-2xl flex flex-col overflow-hidden lg:hidden"          >
+            <nav className="flex flex-1 flex-col items-center justify-center gap-6 w-full px-6">
               {links.map((link, i) => (
                 <motion.div
                   key={link.name}
