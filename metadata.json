@@ -1,0 +1,8 @@
+{
+  "name": "Jaaju Kitchen & Bar",
+  "description": "Premium, modern, cinematic restaurant website for a Hyderabad-based luxury dining brand.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
