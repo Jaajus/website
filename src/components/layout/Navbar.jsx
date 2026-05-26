@@ -57,8 +57,10 @@ export default function Navbar() {
 
   return (
     <>
-      <header className={cn('fixed top-0 left-0 right-0 z-50 transition-all duration-300', navBackground)}>
-        <div className="mx-auto px-3 sm:px-6 lg:px-12 flex items-center justify-between gap-2 h-16 sm:h-20">
+      {/* <header className={cn('fixed top-0 left-0 right-0 z-50 transition-all duration-300', navBackground)}> */}
+      <header className='fixed top-0 left-0 right-0 z-50 transition-all duration-300'>
+
+        <div className="px-3 sm:px-6 lg:px-12 flex items-center justify-between gap-2 h-16 sm:h-20">
           <Link to="/" className="relative z-50 group flex flex-col items-center select-none flex-shrink-0">
             <img
               src={JaajuLogo}
@@ -121,7 +123,7 @@ export default function Navbar() {
 
           {/* Mobile Menu Toggle */}
           <button
-            className="lg:hidden relative z-[60] flex-shrink-0 p-1.5 sm:p-2 text-white hover:text-gold-400 transition-colors focus:outline-none"
+            className="lg:hidden relative z-50 flex-shrink-0 p-1.5 sm:p-2 text-white hover:text-gold-400 transition-colors focus:outline-none"
             aria-label="Toggle navigation menu"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           >
