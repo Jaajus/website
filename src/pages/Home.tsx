@@ -1,8 +1,8 @@
 import Hero from '../components/home/Hero';
 import Experience from '../components/home/Experience';
 import FeaturedMenu from '../components/home/FeaturedMenu';
+import PromiseSection from '../components/home/Promise';
 import Testimonials from '../components/home/Testimonials';
-import InstagramReels from '../components/home/InstagramReels';
 import { motion } from 'motion/react';
 
 export default function Home() {
@@ -16,6 +16,7 @@ export default function Home() {
       >
         <Hero />
         <Experience />
+        <PromiseSection />
         <FeaturedMenu />
 
         {/* Visual Intermission */}
@@ -52,7 +53,6 @@ export default function Home() {
         </section>
 
         <Testimonials />
-        <InstagramReels />
       </motion.div>
     </div>
   );

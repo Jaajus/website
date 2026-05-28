@@ -11,22 +11,12 @@ export default function Terms() {
       <div className="mx-auto relative z-10">
         {/* Header Section */}
         <div className="text-center mb-16">
-          <motion.div
-            initial={{ opacity: 0, y: -20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
-            className="flex justify-center mb-4"
-          >
-            <div className="w-12 h-12 border border-gold-400/30 rounded-full flex items-center justify-center bg-gold-900/10">
-              <Scale size={22} className="text-gold-400" />
-            </div>
-          </motion.div>
 
           <motion.h1
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.1 }}
-            className="text-4xl md:text-5xl font-serif text-white tracking-widest uppercase mb-4"
+          className="text-4xl md:text-5xl font-serif text-white mb-4"
           >
             Terms of <span className="italic text-gradient-gold">Service</span>
           </motion.h1>

@@ -19,7 +19,7 @@ export default function InstagramReels() {
 
   return (
     <section className="py-24 px-6 bg-charcoal-950">
-      <div className="max-w-7xl mx-auto">
+      <div className="mx-auto">
         <div className="text-center mb-16">
           <motion.p 
             initial={{ opacity: 0, y: 20 }}
@@ -40,7 +40,7 @@ export default function InstagramReels() {
           </motion.h2>
         </div>
 
-        <motion.div
+        {/* <motion.div
            initial={{ opacity: 0, y: 20 }}
            whileInView={{ opacity: 1, y: 0 }}
            viewport={{ once: true }}
@@ -48,7 +48,7 @@ export default function InstagramReels() {
            className="w-full"
         >
           <div className="elfsight-app-5efb3901-0c5d-47fb-b758-c11d0e2b11e6" data-elfsight-app-lazy></div>
-        </motion.div>
+        </motion.div> */}
       </div>
     </section>
   );

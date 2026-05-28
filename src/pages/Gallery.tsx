@@ -47,15 +47,8 @@ const images = [
 
 export default function Gallery() {
   return (
-    <div className="pt-32 pb-20 min-h-screen px-6 max-w-7xl mx-auto">
-      <div className="text-center mb-16a">
-        <motion.p
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          className="text-gold-400 text-xs tracking-[0.3em] uppercase mb-4"
-        >
-          Visuals
-        </motion.p>
+    <div className="pt-32 pb-20 min-h-screen px-6 mx-auto">
+      <div className="text-center mb-16">
         <motion.h1
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}

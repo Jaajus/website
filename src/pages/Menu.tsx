@@ -26,17 +26,6 @@ export default function Menu() {
       <div className="max-w-6xl mx-auto relative z-10">
         {/* Header Section */}
         <div className="text-center mb-16 max-w-2xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: -20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
-            className="flex justify-center mb-4"
-          >
-            <div className="w-10 h-10 border border-gold-400/30 rounded-full flex items-center justify-center bg-gold-900/10">
-              <BookOpen size={18} className="text-gold-400" />
-            </div>
-          </motion.div>
-
           <motion.h1
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}

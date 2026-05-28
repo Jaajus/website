@@ -3,7 +3,7 @@ import { MapPin, Phone, Mail, Clock } from 'lucide-react';
 
 export default function Contact() {
   return (
-    <div className="pt-32 pb-20 min-h-screen px-6 max-w-7xl mx-auto">
+    <div className="pt-32 pb-20 min-h-screen px-6 mx-auto">
       <div className="text-center mb-16">
         <motion.p 
           initial={{ opacity: 0, y: 20 }}
@@ -39,7 +39,6 @@ export default function Contact() {
                 First Floor, Block 1, SATYANARAYANA ENCLAVE,<br />
                 Block-F, Madinaguda, Durga Estates,<br />
                 Miyapur, Hyderabad, Telangana 500049<br />
-                <span className="text-sm text-gray-500 mt-2 block tracking-wider uppercase">Plus Code: F8WQ+89 Miyapur</span>
               </p>
             </div>
           </div>

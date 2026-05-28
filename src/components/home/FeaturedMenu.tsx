@@ -32,7 +32,7 @@ const menuItems = [
 export default function FeaturedMenu() {
   return (
     <section className="py-32 px-6 bg-charcoal-900 border-y border-white/5 relative">
-      <div className="max-w-7xl mx-auto">
+      <div className="mx-auto">
         <div className="text-center mb-16">
           <motion.p
             initial={{ opacity: 0, y: 20 }}
@@ -82,9 +82,9 @@ export default function FeaturedMenu() {
                 <div className="flex-1 border-b border-dashed border-white/10 mx-4" />
               </div>
               <div className="flex justify-between items-start gap-4">
-                <div>
+                <div className='flex flex-col items-start'>
                   <h4 className="text-2xl font-serif text-white mb-2 group-hover:text-gold-300 transition-colors">{item.name}</h4>
-                  <p className="text-gray-400 text-sm leading-relaxed max-w-sm">{item.description}</p>
+                  <p className="text-gray-400 text-sm leading-relaxed max-w-sm text-justify">{item.description}</p>
                 </div>
                 <span className="text-xl font-serif text-white">{item.price}</span>
               </div>

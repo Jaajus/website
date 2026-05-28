@@ -28,7 +28,7 @@ export default function Experience() {
       <div className="absolute top-1/4 left-0 w-96 h-96 bg-gold-600/10 rounded-full blur-[120px] pointer-events-none" />
       <div className="absolute bottom-1/4 right-0 w-96 h-96 bg-gold-400/5 rounded-full blur-[100px] pointer-events-none" />
 
-      <div className="max-w-7xl mx-auto">
+      <div className="mx-auto">
         <div className="text-center mb-24">
           <motion.p
             initial={{ opacity: 0, y: 20 }}
@@ -79,7 +79,7 @@ export default function Experience() {
                 className="w-full md:w-1/2 flex flex-col justify-center"
               >
                 <h3 className="text-3xl lg:text-4xl mb-6 text-white">{exp.title}</h3>
-                <p className="text-gray-400 leading-relaxed text-lg mb-8 max-w-md">
+                <p className="text-gray-400 leading-relaxed text-lg mb-8">
                   {exp.description}
                 </p>
                 <div className="w-12 h-px bg-gold-400" />
