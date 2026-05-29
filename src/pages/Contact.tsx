@@ -64,7 +64,7 @@ export default function Contact() {
             </div>
             <div>
               <h3 className="text-xl font-serif text-white mb-2">Contact</h3>
-              <p className="text-gray-400 font-light">09052210101</p>
+              <p className="text-gray-400 font-light">9052210101</p>
               <p className="text-gray-400 font-light mt-1">reserve@jaaju.com</p>
             </div>
           </div>
